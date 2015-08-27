@@ -17,11 +17,6 @@ Class('Role').inherits(Widget)({
             this.buttonElement = this.element.find('button');
 
             this._setup()._bindEvents();
-            var champTag = this;
-            console.log(champTag.tag);
-            function _buttonClickHandler(){
-                champTag.setup();
-            }
         },
 
         /* Auto-run setup to update the widget values.
@@ -48,15 +43,14 @@ Class('Role').inherits(Widget)({
         _buttonClickHandler : 
             
         function _buttonClickHandler() {
+            var role = this;
             window.AppInstance.fetch(function(err, res) {
                 var characters = [];
                 for (var character in res.data){
-                    console.log(res.data[character].tags[0]);
-                    if(res.data[character].tags[0] == champTag.tag){
+                    if(res.data[character].tags[0] == role.getElementsByTagName('span')[0].innerHTML){
                         characters.push(res.data[character]);
                     }
                 }
-                console.log(characters);
                 window.AppInstance.cardsWidget.update(characters);
             });
         },

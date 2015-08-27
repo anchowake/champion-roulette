@@ -32,7 +32,7 @@ Class('App').inherits(Widget)({
                     imagePath : 'https://2.bp.blogspot.com/-YkJsJB9F29o/U5I0ERH6HsI/AAAAAAAAROc/o-edRZYjTKs/s1600/profileIcon662.jpg'
                 },
                 {
-                    tag : 'Figther',
+                    tag : 'Fighter',
                     subtag : 'JUNGLE',
                     imagePath : 'https://3.bp.blogspot.com/-v2GCG8_Q1UU/U5I0C8En3MI/AAAAAAAAROE/g2pq6mAFHTI/s1600/profileIcon658.jpg'
                 },

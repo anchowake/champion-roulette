@@ -1,11 +1,11 @@
 ## TODO
-* cache the Champions results after the first fetch
-* use the cached Champions data and do not fetch again (we already got all the data after the first fetch)
-* filter the results depending on the selected role (do not mutate the results)
-* prevent fetching/filtering if the current active Role is clicked again
+* Cache the Champions results after the first fetch
+* Use the cached Champions data and do not fetch again (we already got all the data after the first fetch)
+* Filter the results depending on the selected role (do not mutate the results)
+* Prevent fetching/filtering if the current active Role is clicked again
 
 ## Nice to have
-* make it reposive
-* remove bootstrap dependency
-* remove jquery dependency
-* remove glyphicon dependency
+* Make it reposive
+* Remove bootstrap dependency
+* Remove jquery dependency
+* Remove glyphicon dependency
