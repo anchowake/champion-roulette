@@ -28,9 +28,9 @@ Class('CardsCotainer').inherits(Widget)({
         },
 
         randomCard: function randomCard() {
-            /* Obtains card total number
-             * Generates random number between 0 and Card Total Number
-             * Gives activate class to the selected card
+            /* Obtains cards total
+             * Generates random number between 0 and Cards Total
+             * Gives active class to the selected card
              */
             var childSize = this.children.length;
             var championCard = this.children;
