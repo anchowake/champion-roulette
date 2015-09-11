@@ -51,7 +51,8 @@ Class('Role').inherits(Widget)({
                         characters.push(res.data[character]);
                     }
                 }
-                window.AppInstance.cardsWidget.update(characters);
+                // Update characters and access randomCard method defined in CardsContainer.js
+                window.AppInstance.cardsWidget.update(characters).randomCard();
             });
         },
 

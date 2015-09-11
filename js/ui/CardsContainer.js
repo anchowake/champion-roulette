@@ -25,6 +25,20 @@ Class('CardsCotainer').inherits(Widget)({
             }, this);
 
             return this;
+        },
+
+        randomCard: function randomCard() {
+            /* Obtains card total number
+             * Generates random number between 0 and Card Total Number
+             * Gives activate class to the selected card
+             */
+            var childSize = this.children.length;
+            var championCard = this.children;
+            var delay=500; 
+
+            setTimeout(function(){
+                championCard[Math.floor((Math.random() * childSize) + 0)].activate();
+            }, delay);   
         }
     }
 });
