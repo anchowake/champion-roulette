@@ -51,17 +51,27 @@ Class('App').inherits(Widget)({
             return this;
         },
 
+        resCache: null,
+
         /* Fetch the champions data and runs the passed callback.
          * @method fetch <public> [Function]
          */
         fetch : function fetch(callback){
+            var app = this;
+            
+            if(this.resCache){return callback(false, this.resCache);}
+
             $.ajax({
                 url: "https://global.api.pvp.net/api/lol/static-data/lan/v1.2/champion?champData=image,tags&api_key=834a82c5-bac3-423b-a90c-abb4e325e1ac",
                 type: 'get',
                 dataType: 'JSON',
-                success: function(res) {callback(false, res);},
+                success: function(res) {
+                    callback(false, res); 
+                    app.resCache = res;
+                },
                 error : function error(res) {callback(true, res);}
             });
+
         }
     }
 });
