@@ -8,4 +8,4 @@
 * ✘ Make it responsive
 * ✘ Remove bootstrap dependency
 * ✘ Remove jquery dependency
-* ✘ Remove glyphicon dependency
+* ✔ Remove glyphicon dependency
