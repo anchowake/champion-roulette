@@ -34,8 +34,8 @@ Class('CardsCotainer').inherits(Widget)({
              */
             var childSize = this.children.length;
             var championCard = this.children;
+            
             var delay=0; 
-
             setTimeout(function(){
                 championCard[Math.floor((Math.random() * childSize) + 0)].activate();
             }, delay);   

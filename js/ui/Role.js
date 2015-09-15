@@ -32,7 +32,7 @@ Class('Role').inherits(Widget)({
         },
 
         _bindEvents : function _bindEvents() {
-            this.buttonElement.on('click', this._buttonClickHandler);
+            this.buttonElement.on('click', this._buttonClickHandler.bind(this));
             return this;
         },
 
@@ -47,7 +47,7 @@ Class('Role').inherits(Widget)({
             window.AppInstance.fetch(function(err, res) {
                 var characters = [];
                 for (var character in res.data){
-                    if(res.data[character].tags[0] == role.getElementsByTagName('span')[0].innerHTML){
+                    if(res.data[character].tags[0] == role.tag){
                         characters.push(res.data[character]);
                     }
                 }
