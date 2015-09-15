@@ -35,7 +35,7 @@ Class('CardsCotainer').inherits(Widget)({
             var childSize = this.children.length;
             var championCard = this.children;
             
-            var delay=0; 
+            var delay=0.5; 
             setTimeout(function(){
                 championCard[Math.floor((Math.random() * childSize) + 0)].activate();
                 $("html, body").animate({ scrollTop: $(".active").offset().top }, 300);
