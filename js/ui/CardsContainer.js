@@ -1,6 +1,6 @@
 /* globals Card */
 Class('CardsCotainer').inherits(Widget)({
-    ELEMENT_CLASS : 'row',
+    ELEMENT_CLASS : 'row CardsCotainer',
     IMAGE_BASE_PATH : 'http://ddragon.leagueoflegends.com/cdn/5.15.1/img/champion/',
 
     prototype : {

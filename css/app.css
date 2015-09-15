@@ -19,6 +19,9 @@ body {
   font-size: 60px;
   margin-top: 45px;
 }
+.CardsCotainer {
+  padding-bottom: 35px;
+}
 .championImage {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -47,14 +50,19 @@ body {
 .toTop a:hover {
   color: gold;
 }
-.btn-danger,
-.btn-warning,
-.btn-info,
-.btn-default,
-.btn-success,
-.btn-primary {
+.btn-role {
   color: #fff;
-  background-color: black;
-  border-color: black;
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 1s ease 0s;
   margin-bottom: 15px;
+  text-shadow: 2px 2px black;
+}
+.btn-role:hover {
+  color: #fff;
+  transition: all 1s ease 0s;
+  background-color: #3ec0bf;
+  border-color: #3ec0bf;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px black;
 }

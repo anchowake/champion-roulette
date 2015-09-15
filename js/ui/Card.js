@@ -1,7 +1,7 @@
 Class('Card').inherits(Widget)({
     HTML : '\
-        <div class="col-md-2">\
-            <img class="championImage center-block" width="128" height="128"/>\
+        <div class="col-md-2 col-xs-6 col-sm-3">\
+            <img class="championImage center-block img-responsive" />\
         </div>',
 
     prototype : {
