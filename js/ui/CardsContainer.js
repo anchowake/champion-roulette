@@ -38,6 +38,7 @@ Class('CardsCotainer').inherits(Widget)({
             var delay=0; 
             setTimeout(function(){
                 championCard[Math.floor((Math.random() * childSize) + 0)].activate();
+                $("html, body").animate({ scrollTop: $(".active").offset().top }, 300);
             }, delay);   
         }
     }
