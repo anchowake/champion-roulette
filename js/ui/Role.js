@@ -1,8 +1,8 @@
 Class('Role').inherits(Widget)({
     HTML : '\
      <div class="col-md-2 col-xs-6 col-sm-4">\
-        <button class="btn btn-role center-block" type="button">\
-          <img class="img-responsive center-block img-rounded" width="128" height="128"/>\
+        <button class="btn btn-role center-block" type="button ">\
+          <img class="img-responsive center-block img-rounded"/>\
           <p><span data-tag></span><br><small data-subtag></small></p>\
         </button>\
       </div>',
@@ -32,6 +32,7 @@ Class('Role').inherits(Widget)({
         },
 
         _bindEvents : function _bindEvents() {
+            // Binds the context in this element to _buttonClickHandler
             this.buttonElement.on('click', this._buttonClickHandler.bind(this));
             return this;
         },
@@ -46,6 +47,7 @@ Class('Role').inherits(Widget)({
             var role = this;
             window.AppInstance.fetch(function(err, res) {
                 var characters = [];
+                console.log(res)
                 for (var character in res.data){
                     if(res.data[character].tags[0] == role.tag){
                         characters.push(res.data[character]);

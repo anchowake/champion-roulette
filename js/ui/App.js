@@ -2,7 +2,7 @@
 Class('App').inherits(Widget)({
     prototype : {
         /* Appends its immediate widget childs (Roles, CardsCotainer) and
-         * runs the `setup` method for CardsCotainer which creates and
+         * runs the `setup` method for CardsContainer which creates and
          * appends the main Roles to choose from.
          * @method run <public> [Function]
          */
@@ -13,6 +13,10 @@ Class('App').inherits(Widget)({
 
             this.appendChild(new CardsCotainer({
                 name : 'cardsWidget'
+            })).render(this.element);
+
+            this.appendChild(new Modal({
+                name: 'modalWidget'
             })).render(this.element);
 
             this.rolesWidget.setup([
@@ -62,7 +66,7 @@ Class('App').inherits(Widget)({
             if(this.resCache){return callback(false, this.resCache);}
 
             $.ajax({
-                url: "https://global.api.pvp.net/api/lol/static-data/lan/v1.2/champion?champData=image,tags&api_key=834a82c5-bac3-423b-a90c-abb4e325e1ac",
+                url: "https://global.api.pvp.net/api/lol/static-data/lan/v1.2/champion?champData=image,tags,stats&api_key=834a82c5-bac3-423b-a90c-abb4e325e1ac",
                 type: 'get',
                 dataType: 'JSON',
                 success: function(res) {

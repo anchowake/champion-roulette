@@ -3,6 +3,7 @@ Class('CardsCotainer').inherits(Widget)({
     ELEMENT_CLASS : 'row CardsCotainer',
     IMAGE_BASE_PATH : 'http://ddragon.leagueoflegends.com/cdn/5.15.1/img/champion/',
 
+
     prototype : {
         /* Removes and appends the new Cards passed as param.
          * @method update <public> [Function]
@@ -20,10 +21,12 @@ Class('CardsCotainer').inherits(Widget)({
                 }));
 
                 this['card_' + index]
-                    .setup(this.constructor.IMAGE_BASE_PATH + card.image.full)
+                    // Setup params for img source path,heroe name and heroe stats for the card and modal
+                    .setup(this.constructor.IMAGE_BASE_PATH + card.image.full, card.name, card.stats)
                     .render(this.element);
-            }, this);
 
+            }, this);
+    
             return this;
         },
 
