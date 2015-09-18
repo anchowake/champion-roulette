@@ -66,7 +66,7 @@ Class('App').inherits(Widget)({
             if(this.resCache){return callback(false, this.resCache);}
 
             $.ajax({
-                url: "https://global.api.pvp.net/api/lol/static-data/lan/v1.2/champion?champData=image,tags,stats&api_key=834a82c5-bac3-423b-a90c-abb4e325e1ac",
+                url: "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData=image,tags,stats&api_key=834a82c5-bac3-423b-a90c-abb4e325e1ac",
                 type: 'get',
                 dataType: 'JSON',
                 success: function(res) {

@@ -5,7 +5,7 @@
 * ✔ Prevent fetching if the current active Role is clicked again
 
 ## Nice to have
-* ✘ Make it responsive
+* ✔ Make it responsive
 * ✘ Remove bootstrap dependency
 * ✘ Remove jquery dependency
 * ✔ Remove glyphicon dependency
