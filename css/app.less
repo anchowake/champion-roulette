@@ -35,11 +35,17 @@ body {
 	img {
 		filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
 	    -webkit-filter: grayscale(0%);
-	    -webkit-box-shadow:0 0 75px red; 
-		-moz-box-shadow: 0 0 75px red; 
-		box-shadow:0 0 75px red;
+	    -webkit-box-shadow:0 0 75px orangered; 
+		  -moz-box-shadow: 0 0 75px orangered; 
+		  box-shadow:0 0 75px orangered;
 	    transition: all 1s ease 0s;
 	}
+}
+.active:hover{
+   img{
+     transform: scale(1.1);
+     box-shadow:0 0 75px gold;
+   }
 }
 .toTop{
 	position:fixed;
@@ -56,12 +62,32 @@ body {
 	}
 }
 .btn-role{
-	color: #fff;
+	  color: #fff;
     background-color: transparent;
     border-color: transparent;
     transition: all 1s ease 0s;
     margin-bottom: 15px;
     text-shadow: 2px 2px black;
+    p{
+        opacity:0;
+        transition: all 1s ease 0s;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        cursor: pointer;
+        display: table;
+        height: 128px;
+        /* left: 0; */
+        position: absolute;
+        top: 7px;
+        width: 128px;
+        margin: 0px;
+        border-radius: 5px;
+        span,small{
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+    }
 } 
 .btn-role:hover{
 	color: #fff;
@@ -70,6 +96,10 @@ body {
     border-color: lighten(#257372, 20%);
     margin-bottom: 15px;
     text-shadow: 2px 2px black;
+    p{
+      transition: all 1s ease 0s;
+      opacity: 1;
+    }
 } 
 
 /**
@@ -134,4 +164,10 @@ body {
   content: " ";
   font-size: 0;
   line-height: 0;
+}
+
+progress{
+  width:100%;
+  height:15px;
+
 }

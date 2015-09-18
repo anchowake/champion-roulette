@@ -1,6 +1,6 @@
 Class('Modal').inherits(Widget)({
     HTML : '\
-        <div class="modal fade" id="champ" tabindex="-1" role="dialog">\
+        <div class="modal fade" id="champStats" tabindex="-1" role="dialog">\
           <div class="modal-dialog">\
             <div class="modal-content">\
               <div class="modal-header">\
@@ -9,18 +9,29 @@ Class('Modal').inherits(Widget)({
               </div>\
               <div class="modal-body">\
               <div class="row">\
-                  <div class="col-md-6">\
-                  </div>\
-                  <div class="col-md-6">\
+                  <div class="col-md-12">\
+                    <dl>\
+                      <dt>Health:</dt>\
+                        <dd class="hp">200</dd>\
+                      <dt>Energy:</dt>\
+                        <dd class="mp">200</dd>\
+                      <dt>Armor:</dt>\
+                        <dd class="arm">200</dd>\
+                      <dt>Magic Resistance:</dt>\
+                        <dd class="mr">200</dd>\
+                      <dt>Attack Damage:</dt>\
+                        <dd class="ad">200</dd>\
+                      <dt>Movement Speed:</dt>\
+                        <dd class="ap">200</dd>\
+                    </dl>\
                   </div>\
              </div>\
               <div class="modal-footer">\
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>\
-                <button type="button" class="btn btn-primary">Save changes</button>\
               </div>\
-            </div><!-- /.modal-content -->\
-          </div><!-- /.modal-dialog -->\
-        </div><!-- /.modal -->',
+            </div>\
+          </div>\
+        </div>',
 
     prototype : {
         /* Sets the stats data and modal id.
@@ -28,11 +39,15 @@ Class('Modal').inherits(Widget)({
          * @argument heroeName <require> [String] the heroe name
          * @return Modal [Object]
          */
-        setup : function setup() {
+        setup : function setup(heroeStats,heroeName) {
             // Finds the img element and sets the src attr to the imagePath
-            this.element.find('div.modal.fade').attr('id', heroeName);
             this.element.find('h4').html(heroeName+' Stats');
-            
+            this.element.find('.hp').html(heroeStats.hp);
+            this.element.find('.mp').html(heroeStats.mp);
+            this.element.find('.arm').html(heroeStats.armor);
+            this.element.find('.mr').html(heroeStats.spellblock);
+            this.element.find('.ad').html(heroeStats.attackdamage);
+            this.element.find('.ap').html(heroeStats.movespeed);
             return this;
         }
     }

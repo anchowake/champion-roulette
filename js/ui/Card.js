@@ -1,7 +1,7 @@
 Class('Card').inherits(Widget)({
     HTML : '\
         <div class="col-md-2 col-xs-6 col-sm-3">\
-            <a data-toggle="modal" >\
+            <a data-toggle="modal" data-target="#champStats">\
                 <img class="inactive center-block img-responsive" />\
             </a>\
         </div>',
@@ -25,7 +25,7 @@ Class('Card').inherits(Widget)({
             this.element.find('img').attr('src', imagePath);
             // Finds the anchor element and sets the data-tooltip attr to the heroeName
             this.element.find('a').attr('data-tooltip',heroeName);
-            this.element.find('a').attr('data-target', '#'+heroeName);
+            this.heroeName = heroeName;
             this.heroeStats = heroeStats;
             return this;
         },
@@ -34,10 +34,9 @@ Class('Card').inherits(Widget)({
             this.buttonElement.on('click', this._buttonClickHandler.bind(this));
             return this;
         },
-        // Sends the params for the modal stats and data-toggle
+        // Sends the params for the modal stats and champion name
         _buttonClickHandler : function _buttonClickHandler() {
-            console.log('heroeclickeado')
-            console.log(this.heroeStats);
+            window.AppInstance.modalWidget.setup(this.heroeStats,this.heroeName);
         },
     }
 });

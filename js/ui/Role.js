@@ -3,7 +3,7 @@ Class('Role').inherits(Widget)({
      <div class="col-md-2 col-xs-6 col-sm-4">\
         <button class="btn btn-role center-block" type="button ">\
           <img class="img-responsive center-block img-rounded"/>\
-          <p><span data-tag></span><br><small data-subtag></small></p>\
+          <p><span data-tag></span><span>/</span><small data-subtag></small></p>\
         </button>\
       </div>',
 

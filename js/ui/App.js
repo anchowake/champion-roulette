@@ -22,17 +22,17 @@ Class('App').inherits(Widget)({
             this.rolesWidget.setup([
                 {
                     tag : 'Marksman',
-                    subtag : 'ADC',
+                    subtag : 'ADC ',
                     imagePath : 'https://3.bp.blogspot.com/-S5B0ivddWio/U5I0DlzYQfI/AAAAAAAAROY/_1kIRNwpzfs/s1600/profileIcon660.jpg'
                 },
                 {
                     tag : 'Mage',
-                    subtag : 'MID',
+                    subtag : 'MID ',
                     imagePath : 'https://4.bp.blogspot.com/--xmzHf4UcyM/U5I0C3oY7HI/AAAAAAAAROo/enwiN0kIdws/s1600/profileIcon659.jpg'
                 },
                 {
                     tag : 'Tank',
-                    subtag : 'TOP',
+                    subtag : 'TOP ',
                     imagePath : 'https://2.bp.blogspot.com/-YkJsJB9F29o/U5I0ERH6HsI/AAAAAAAAROc/o-edRZYjTKs/s1600/profileIcon662.jpg'
                 },
                 {
@@ -42,7 +42,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                     tag : 'Support',
-                    subtag : 'SUP',
+                    subtag : 'BOT DUO',
                     imagePath : 'https://2.bp.blogspot.com/-Ovh-xrRajG4/U5I0DzodKqI/AAAAAAAAROU/BE472WcYzX4/s1600/profileIcon661.jpg'
                 },
                 {
