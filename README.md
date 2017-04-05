@@ -1,11 +1,7 @@
-## TO DO
-* ✔ Cache the Champions results after the first fetch
-* ✔ Use the cached Champions data and do not fetch again
-* ✔ Filter the results depending on the selected role (do not mutate the results)
-* ✔ Prevent fetching if the current active Role is clicked again
+# What champion should i play?
+## Troll your team or learn new champions 😂
 
-## Nice to have
-* ✔ Make it responsive
-* ✘ Remove bootstrap dependency
-* ✘ Remove jquery dependency
-* ✔ Remove glyphicon dependency
+Simple app that selects a random champion for you.
+
+## @TODO
+* Make it fetch all new champions
